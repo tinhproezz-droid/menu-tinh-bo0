@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MENU TÍNH BÒ</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+background:#050505;
+color:white;
+display:flex;
+justify-content:center;
+padding:20px;
+overflow-x:hidden;
+}
+
+/* nền */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#00cfff22,transparent 40%);
+z-index:-2;
+}
+
+/* card */
+.container{
+width:100%;
+max-width:420px;
+background:#0a0a0a;
+border:2px solid #00cfff;
+border-radius:25px;
+padding:20px;
+box-shadow:
+0 0 10px #00cfff,
+0 0 30px #00cfff44;
+position:relative;
+overflow:hidden;
+}
+
+/* neon line */
+.container::before{
+content:"";
+position:absolute;
+width:200%;
+height:2px;
+background:linear-gradient(90deg,
+transparent,#00cfff,transparent);
+animation:run 4s linear infinite;
+top:0;
+left:-50%;
+}
+
+@keyframes run{
+100%{
+transform:translateX(50%);
+}
+}
+
+/* avatar */
+.avatar{
+width:120px;
+height:120px;
+border-radius:50%;
+border:4px solid #00cfff;
+margin:auto;
+overflow:hidden;
+box-shadow:0 0 20px #00cfff;
+animation:spin 5s linear infinite;
+}
+
+.avatar img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* title */
+h1{
+text-align:center;
+margin-top:15px;
+font-size:42px;
+color:#00cfff;
+text-shadow:0 0 20px #00cfff;
+}
+
+/* sub */
+.sub{
+margin-top:10px;
+text-align:center;
+padding:12px;
+border:2px solid #00cfff;
+border-radius:20px;
+box-shadow:0 0 10px #00cfff55;
+}
+
+/* box */
+.box{
+margin-top:20px;
+background:#081018;
+padding:18px;
+border-radius:20px;
+border:1px solid #00cfff55;
+box-shadow:0 0 15px #00cfff22;
+}
+
+.box h2{
+color:#00cfff;
+margin-bottom:10px;
+font-size:24px;
+}
+
+.price{
+font-size:22px;
+margin-top:8px;
+color:#ffffff;
+}
+
+/* button */
+.btn{
+display:block;
+text-decoration:none;
+margin-top:15px;
+padding:15px;
+text-align:center;
+border-radius:20px;
+border:2px solid #00cfff;
+color:white;
+font-weight:bold;
+transition:0.3s;
+box-shadow:0 0 10px #00cfff55;
+}
+
+.btn:hover{
+background:#00cfff;
+color:black;
+transform:scale(1.05);
+}
+
+/* footer */
+.footer{
+margin-top:25px;
+text-align:center;
+font-size:14px;
+color:#aaa;
+}
+
+/* stars */
+.star{
+position:fixed;
+width:2px;
+height:100px;
+background:linear-gradient(#00cfff,transparent);
+animation:fall linear infinite;
+opacity:.6;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) translateX(0);
+}
+100%{
+transform:translateY(100vh) translateX(200px);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="avatar">
+<img src="https://i.imgur.com/8Km9tLL.jpg">
+</div>
+
+<h1>MENU TÍNH BÒ</h1>
+
+<div class="sub">
+⚡ FILE - REG - AIM - SOURCE ⚡
+</div>
+
+<div class="box">
+<h2>🔥 FILE REG VIP</h2>
+
+<div class="price">
+📱 ANDROID : 50K - 500K
+</div>
+
+<div class="price">
+🍎 IOS : 100K - 700K
+</div>
+</div>
+
+<div class="box">
+<h2>💻 SOURCE CODE</h2>
+
+<p>
+JAVA • C++ • HTML • CSS • XML
+</p>
+</div>
+
+<a class="btn" href="#">
+💬 ZALO LIÊN HỆ
+</a>
+
+<a class="btn" href="#">
+📘 FACEBOOK
+</a>
+
+<a class="btn" href="#">
+👥 NHÓM CỘNG ĐỒNG
+</a>
+
+<div class="footer">
+AI UI TÍNH BÒ 😎
+</div>
+
+</div>
+
+<script>
+
+/* tạo sao băng */
+
+for(let i=0;i<25;i++){
+
+let star=document.createElement("div");
+
+star.classList.add("star");
+
+star.style.left=Math.random()*100+"%";
+
+star.style.animationDuration=
+(Math.random()*3+2)+"s";
+
+star.style.animationDelay=
+(Math.random()*5)+"s";
+
+document.body.appendChild(star);
+
+}
+
+</script>
+
+</body>
+</html> 
